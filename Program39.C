@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int num = 100;
+
+    int *ptr;
+    int **dptr;
+
+    ptr = &num;
+    dptr = &ptr;
+
+    // Display using normal variable
+    printf("Using Normal Variable:\n");
+    printf("Value of num = %d\n", num);
+    printf("Address of num = %p\n", (void *)&num);
+
+    // Display using single pointer
+    printf("\nUsing Single Pointer:\n");
+    printf("Value of num = %d\n", *ptr);
+    printf("Address of num = %p\n", (void *)ptr);
+
+    // Display using double pointer
+    printf("\nUsing Double Pointer:\n");
+    printf("Value of num = %d\n", **dptr);
+    printf("Address of num = %p\n", (void *)*dptr);
+    printf("Address of ptr = %p\n", (void *)dptr);
+
+    return 0;
+}
